@@ -1,0 +1,23 @@
+/* Contenedor de la galería */
+.gallery {
+  display: grid; /* Activar grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 15px; /* Espacio entre filas y columnas */
+  width: max-content; /* Ajusta el ancho al contenido */
+  margin: 20px auto; /* Centrar horizontalmente */
+  padding: 10px; /* Espacio interno alrededor */
+  background-color: #f9f9f9; /* Fondo claro para destacar */
+  border: 1px solid #ccc; /* Borde similar a la ventana */
+  box-sizing: border-box;
+}
+
+/* Estilo para cada imagen dentro de la galería */
+.gallery img {
+  width: 100px; /* Ancho fijo */
+  height: 100px; /* Alto fijo */
+  object-fit: cover; /* La imagen cubre el área sin deformarse */
+  border: 1px solid #999; /* Borde gris para cada imagen */
+  box-sizing: border-box; /* Incluir borde en el tamaño */
+  background-color: #ddd; /* Color de fondo para imágenes vacías o carga */
+  display: block; /* Eliminar espacio inferior */
+}

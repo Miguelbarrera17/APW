@@ -1,0 +1,18 @@
+/* Estado normal: enlaces en color rojo #CC0000 */
+a {
+  color: #CC0000;
+  text-decoration: none; /* Opcional: quita el subrayado si quieres */
+}
+
+/* Estado hover: fondo rojo #CC0000 y texto blanco #FFF */
+a:hover {
+  background-color: #CC0000;
+  color: #FFF;
+  text-decoration: none; /* Opcional: quita el subrayado en hover */
+}
+
+/* Estado visited: enlaces visitados en color gris claro #CCC */
+a:visited {
+  color: #CCC;
+  text-decoration: none; /* Opcional */
+}

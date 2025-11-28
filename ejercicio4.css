@@ -1,0 +1,235 @@
+/* Estilos generales del cuerpo y reseteo básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Fondo gris claro para la página */
+    color: #333;
+    line-height: 1.6;
+    font-size: 14px; /* Tamaño de fuente base */
+}
+
+/* Contenedor principal que envuelve todo el diseño */
+.container {
+    max-width: 960px; /* Ancho máximo del diseño */
+    margin: 20px auto; /* Centra el contenedor horizontalmente con margen superior/inferior */
+    background-color: #fff; /* Fondo blanco para todo el layout */
+    border: 1px solid #ccc; /* Borde general alrededor del diseño */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+}
+
+/* Encabezado (LOGOTIPO y Buscar) */
+header {
+    display: flex; /* Usa flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre el logo y el buscador */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee; /* Línea divisoria inferior */
+    background-color: #f8f8f8; /* Fondo ligeramente gris */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.search {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+/* Navegación superior (LoremIpsumDolorSitAmet) */
+.top-nav {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f8f8;
+}
+
+.top-nav a {
+    color: #007bff; /* Color azul para los enlaces */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal de contenido (barras laterales y artículos centrales) */
+.main-content-grid {
+    display: grid; /* Usa CSS Grid para el layout de 3 columnas */
+    grid-template-columns: 200px 1fr 200px; /* Columna izquierda (200px), central (flexible), derecha (200px) */
+    gap: 0; /* No hay espacio entre las columnas, los bordes las separan */
+    border-bottom: 1px solid #eee; /* Línea divisoria inferior */
+}
+
+/* Estilos para las barras laterales */
+.left-sidebar, .right-sidebar {
+    padding: 20px;
+    background-color: #fdfdfd; /* Fondo casi blanco */
+}
+
+.left-sidebar {
+    border-right: 1px solid #eee; /* Borde derecho para separar del contenido central */
+}
+
+.right-sidebar {
+    border-left: 1px solid #eee; /* Borde izquierdo para separar del contenido central */
+}
+
+/* Estilos para las secciones dentro de las barras laterales */
+.left-sidebar section, .right-sidebar section {
+    margin-bottom: 20px;
+}
+
+.left-sidebar h3, .right-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 1px solid #eee; /* Línea bajo el título de la sección */
+    padding-bottom: 5px;
+}
+
+.left-sidebar ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+.left-sidebar li {
+    margin-bottom: 5px;
+}
+
+.left-sidebar a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.left-sidebar a:hover {
+    text-decoration: underline;
+}
+
+.left-sidebar p {
+    font-size: 13px;
+}
+
+/* Estilos para el área de artículos centrales */
+.central-articles {
+    padding: 20px;
+}
+
+.central-articles article {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eee; /* Borde punteado para separar artículos */
+}
+
+.central-articles article:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; /* El último artículo no tiene borde inferior */
+}
+
+.central-articles h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.article-content {
+    overflow: hidden; /* Contiene el float de la imagen */
+    margin-bottom: 10px;
+}
+
+/* Estilo para el placeholder de imagen (el cuadro gris con una X) */
+.placeholder-image {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd; /* Fondo gris */
+    border: 1px solid #ccc;
+    float: left; /* Flota la imagen a la izquierda del texto */
+    margin-right: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Creación de la "X" con pseudo-elementos */
+.placeholder-image::before,
+.placeholder-image::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%; /* Longitud de las líneas */
+    height: 2px; /* Grosor de las líneas */
+    background-color: #999;
+    transform: translate(-50%, -50%) rotate(45deg); /* Primera línea diagonal */
+}
+
+.placeholder-image::after {
+    transform: translate(-50%, -50%) rotate(-45deg); /* Segunda línea diagonal */
+}
+
+.central-articles p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.central-articles a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.central-articles a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para párrafos en la barra lateral derecha */
+.right-sidebar p {
+    font-size: 14px;
+}
+
+/* Pie de página */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f8f8;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-nav a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-nav a:last-child {
+    margin-right: 0; /* Elimina el margen del último enlace */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: right;
+}

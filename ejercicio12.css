@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#contenedor {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la lista del formulario */
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li {
+    position: relative; /* Para posicionar el texto de ayuda */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex; /* Usar flexbox para el diseño interno */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    align-items: flex-start; /* Alinear elementos en la parte superior */
+}
+
+/* Fondo inicial para la primera sección (Nombre y apellidos) */
+form li:first-of-type {
+    background-color: #fff9c4; /* Amarillo claro (#FFF9C4) */
+}
+
+/* Efecto hover para las secciones (li) */
+form li:hover {
+    background-color: #fff9c4; /* Amarillo claro */
+    border-color: #e6b700; /* Amarillo-naranja */
+}
+
+/* Estilos para los títulos de las secciones */
+label.titulo {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    width: 100%; /* Ocupar todo el ancho */
+    display: block; /* Asegurar que sea un elemento de bloque */
+}
+
+.requerido {
+    color: red;
+    margin-left: 3px;
+}
+
+/* Contenedor de los campos de entrada dentro de cada li */
+form li > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre grupos de entrada */
+    flex-grow: 1; /* Permitir que ocupe el espacio disponible */
+    margin-right: 220px; /* Reservar espacio a la derecha para el texto de ayuda */
+}
+
+/* Cada par input-label */
+form li > div > span {
+    display: flex;
+    flex-direction: column; /* Apilar input y label */
+    flex-basis: calc(50% - 10px); /* Dos columnas, ajustando el espacio */
+    min-width: 150px; /* Ancho mínimo para responsividad */
+}
+
+/* Ajuste específico para el campo de email, ya que no tiene label debajo */
+form li:nth-child(3) > div > span {
+    flex-basis: 100%; /* El input de email ocupa todo el ancho */
+}
+
+/* Estilos para inputs y selects */
+form li input[type="text"],
+form li input[type="email"],
+form li select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto focus/hover para campos de entrada */
+form li input[type="text"]:focus,
+form li input[type="email"]:focus,
+form li select:focus,
+form li input[type="text"]:hover,
+form li input[type="email"]:hover,
+form li select:hover {
+    border-color: #e6b700; /* Amarillo-naranja */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+/* Labels debajo de los campos de entrada */
+form li > div > span label {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+    display: block; /* Asegurar que ocupe su propia línea */
+}
+
+/* Estilos para el texto de ayuda */
+p.ayuda {
+    position: absolute;
+    right: 15px; /* Posicionar a la derecha del li */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff9c4; /* Fondo amarillo claro */
+    border: 1px solid #e6b700; /* Borde amarillo-naranja */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #333;
+    width: 200px; /* Ancho fijo para la caja de ayuda */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Oculto por defecto */
+    z-index: 10; /* Asegurar que aparezca por encima de otros contenidos */
+    text-align: left;
+}
+
+/* Mostrar texto de ayuda al hacer hover sobre el li */
+form li:hover p.ayuda {
+    display: block;
+}
+
+/* Estilos para el botón de enviar */
+#alta {
+    display: block; /* Hacerlo un elemento de bloque */
+    margin-left: auto; /* Empujar a la derecha */
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #e0e0e0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#alta:hover {
+    background-color: #d0d0d0;
+    border-color: #999;
+}
+
+/* Ajustes para pantallas más pequeñas (responsividad) */
+@media (max-width: 768px) {
+    form li > div {
+        margin-right: 0; /* Eliminar el margen para el texto de ayuda */
+    }
+    p.ayuda {
+        position: static; /* Volver al flujo normal */
+        width: auto;
+        margin-top: 10px;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        font-size: 0.8em;
+        color: #666;
+        display: block; /* Mostrar siempre en pantallas pequeñas */
+    }
+    form li:hover p.ayuda {
+        display: block; /* Asegurar que se muestre en hover */
+    }
+}
+
+@media (max-width: 600px) {
+    form li > div > span {
+        flex-basis: 100%; /* Apilar inputs en pantallas pequeñas */
+    }
+}
