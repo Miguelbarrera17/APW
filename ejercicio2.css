@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título principal */
+#titulo {
+  color: teal;
+}
+
+/* Subtítulo */
+#subtitulo {
+  color: blue;
+}
+
+/* Texto destacado en el primer párrafo */
+.destacado {
+  color: fuchsia;
+}
+
+/* Texto fuerte */
+strong {
+  color: red;
+}
+
+/* Enlaces */
+a {
+  color: red;
+  text-decoration: none;
+}
+
+/* Enlaces dentro del div adicional */
+#adicional a {
+  color: green;
+  text-decoration: underline;
+}
+
+/* Span con clase especial dentro del segundo párrafo */
+.especial {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Tabla */
+table {
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+caption {
+  background-color: lightblue;
+  color: blue;
+  font-weight: bold;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 4px 8px;
+}
+
+/* Cabecera de tabla */
+thead th {
+  background-color: #ffffcc;
+}
+
+/* Primera columna (títulos de fila) */
+tbody th {
+  background-color: #ffcccc;
+  color: red;
+}
+
+/* Segunda y tercera columna */
+tbody td {
+  background-color: #ccffcc;
+}
+
+/* Pie de tabla */
+tfoot th, tfoot td {
+  background-color: #ffcc99;
+  color: red;
+}
+
+/* Texto dentro del div adicional */
+#adicional {
+  color: olive;
+}
+
+#adicional span {
+  color: purple;
+}
+
+#adicional #especial {
+  color: blue;
+  font-weight: bold;
+}
